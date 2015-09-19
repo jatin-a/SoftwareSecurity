@@ -42,9 +42,9 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		User user = new User();
 		user.setEmail("blah@asu.edu");
-		user.setId("j100216");
-		user.setPassword("blahblah");
-		user.setUsername("blahblah");
+		user.setId("j10021645");
+		user.setPassword("blah12blah");
+		user.setUsername("blahbl45ah");
 		userManager.saveUser(user);
 		model.addAttribute("serverTime", formattedDate);
 		model.addAttribute("welcome", messageSource.getMessage("message.welcome", null, Locale.US));
