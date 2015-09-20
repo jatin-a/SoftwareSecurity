@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.sbs.internetbanking.model.User;
 import com.sbs.internetbanking.persistence.UserManager;
 
 /**
@@ -32,6 +33,13 @@ public class LoginController {
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
+		User user = new User();
+		user.setEmail("blah@asu.edu");
+		user.setId("j10021645");
+		user.setPassword("blah12blah");
+		user.setUsername("blahbl45ah");
+		userManager.updateUser(user);
+		 model.addAttribute("welcome", messageSource.getMessage("message.welcome", null, Locale.US));
 		return "login";
 	}
 	
